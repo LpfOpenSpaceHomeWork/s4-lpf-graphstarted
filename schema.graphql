@@ -1,0 +1,20 @@
+type CreatedNFT @entity(immutable: true) {
+  id: ID!
+  nftCA: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type TokenInfo @entity {
+  id: ID!
+  ca: Bytes! # address
+  tokenId: BigInt! # uint256
+  owner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+  # 不知道怎么在mapping函数里查询合约数据，先不做
+  # tokenURL: String!
+  # name: String!
+}
