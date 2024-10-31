@@ -14,7 +14,6 @@ type TokenInfo @entity {
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
-  # 不知道怎么在mapping函数里查询合约数据，先不做
-  # tokenURL: String!
-  # name: String!
+  tokenURL: String!
+  name: String!
 }
